@@ -6,7 +6,7 @@ const Page = () => {
   return (
     <main className="flex flex-col flex-grow">
       <div
-        className="py-16 w-full flex flex-row bg-cover bg-center h-40vh"
+        className="py-16 w-full flex flex-row bg-cover bg-center h-auto lg:h-40vh"
         style={{ backgroundImage: `url('${t('image_contact_us_banner')}')` }}
       >
         <div className="w-1/2 flex flex-row items-center justify-center content-center pl-3 lg:pl-0">
@@ -53,7 +53,7 @@ const Page = () => {
             <h2 className="mt-1 text-gray-500">{t('general_inquiry_email')}</h2>
           </div>
         </div>
-        <div className="flex flex-col w-full items-center justify-center content-center mt-5 flex-grow py-10 h-40vh">
+        <div className="flex flex-col w-full items-center justify-center content-center mt-5 flex-grow py-10 lg:h-40vh h-auto">
           <div className="flex flex-col items-center w-1/2 h-auto">
             <h1 className="text-5xl mb-5">{t('sales_inquiry_title')}</h1>
             <h1 className="text-2xl mb-5">{t('sales_inquiry_times')}</h1>

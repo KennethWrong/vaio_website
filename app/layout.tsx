@@ -1,6 +1,5 @@
-import type { Metadata } from "next";
-// import localFont from "next/font/local";
-import "./globals.css";
+import type { Metadata } from 'next';
+import './globals.css';
 
 // const geistSans = localFont({
 //   src: "./fonts/GeistVF.woff",
@@ -14,8 +13,8 @@ import "./globals.css";
 // });
 
 export const metadata: Metadata = {
-  title: "VAIO | VAIO Official Website",
-  description: "VAIO | VAIO Official Website",
+  title: 'VAIO | VAIO Official Website',
+  description: 'VAIO | VAIO Official Website',
 };
 
 export default async function RootLayout({
