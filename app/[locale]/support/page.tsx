@@ -6,16 +6,18 @@ const Page = () => {
   return (
     <main className="flex flex-col flex-grow">
       <div
-        className="py-16 w-full flex flex-row bg-cover bg-center h-40vh"
+        className="py-16 w-full flex flex-row bg-cover bg-center lg:h-40vh sm:h-auto"
         style={{ backgroundImage: `url('${t('image_support_banner')}')` }}
       >
-        <div className="w-1/2 flex flex-row items-center justify-center content-center pl-3 lg:pl-0">
-          <div className="flex flex-col w-1/2 gap-y-10">
-            <h1 className=" text-6xl">{t('support_header')}</h1>
+        <div className="lg:w-1/2 w-full flex flex-row items-center justify-center content-center pl-3 lg:pl-0">
+          <div className="flex flex-col lg:w-1/2 w-full gap-y-10 items-center lg:items-start">
+            <h1 className=" text-6xl bg-white lg:bg-transparent">
+              {t('support_header')}
+            </h1>
           </div>
         </div>
       </div>
-      <div className="flex flex-col w-full h-40vh mt-10 pl-3 lg:pl-0">
+      <div className="flex flex-col w-full lg:h-40vh h-auto mt-10 pl-3 lg:pl-0">
         <div
           id="support-center"
           className="flex flex-col w-full items-center justify-center content-center"
@@ -46,7 +48,7 @@ const Page = () => {
       </div>
       <div
         id="support-warranty"
-        className="flex flex-col w-full flex-grow items-center mb-15"
+        className="flex flex-col w-full flex-grow items-center mb-15 mt-10 lg:mt-0"
       >
         <h1 className="text-5xl text-center">{t('warranty')}</h1>
         <div className="flex flex-col pl-4 mt-6 items-center">
@@ -79,7 +81,9 @@ const Page = () => {
           <h1 className="mb-3 font-bold text-xl">
             {t('linked_warranty_plan')}
           </h1>
-          <h1 className="mb-3 italic">{t('linked_warranty_regions')}</h1>
+          <h1 className="mb-3 italic w-3/4 lg:w-full">
+            {t('linked_warranty_regions')}
+          </h1>
           <ol className="list-inside text-gray-600 space-y-4 list-decimal leading-loose w-3/4">
             <li>{t('linked_warranty_1')}</li>
             <li>{t('linked_warranty_2')}</li>

@@ -5,7 +5,7 @@ function Page() {
   return (
     <main>
       <div
-        className="py-16 w-full flex flex-row bg-cover bg-center h-40vh bg-slate-600"
+        className="py-16 w-full flex flex-row bg-cover bg-center lg:h-40vh h-auto bg-slate-600"
         style={{ backgroundImage: `url('${t('image_about_us_banner')}')` }}
       >
         <div className="w-full flex flex-col items-center justify-center content-center pl-3 lg:pl-0">
