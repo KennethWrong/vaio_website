@@ -16,6 +16,7 @@ export default function HeaderImageBlock({
   titleColour = '',
   imageWidthLarge = 'w-3/4',
   imageWidthSmall = 'w-1/2',
+  titleBold = false,
 }: {
   topTag?: string;
   title?: string;
@@ -32,6 +33,7 @@ export default function HeaderImageBlock({
   titleColour?: string;
   imageWidthLarge?: string;
   imageWidthSmall?: string;
+  titleBold?: boolean;
 }) {
   return (
     <div className="w-full flex flex-col items-center">
@@ -39,7 +41,9 @@ export default function HeaderImageBlock({
       <h1
         className={`${
           titleCenter ? 'lg:text-center' : 'lg:text-start'
-        } ${titleSize} mb-5 ${titleColour} text-center`}
+        } ${titleSize} mb-5 ${titleColour} text-center ${
+          titleBold ? 'font-bold' : ''
+        }`}
       >
         {title}
       </h1>

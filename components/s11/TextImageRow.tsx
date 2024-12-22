@@ -12,8 +12,10 @@ export default function TextImageRow({
   titleSize = 'text-4xl',
   textSize = '',
   disclaimerTextColour = 'text-gray-500',
+  titleCenter = true,
   textCenter = true,
   itemAlign = 'items-center',
+  titleBold = false,
 }: {
   tagText?: string;
   title?: string;
@@ -28,6 +30,8 @@ export default function TextImageRow({
   disclaimerTextColour?: string;
   textCenter?: boolean;
   itemAlign?: string;
+  titleBold?: boolean;
+  titleCenter?: boolean;
 }) {
   return (
     <div
@@ -42,8 +46,8 @@ export default function TextImageRow({
         {title ? (
           <h1
             className={`${titleSize} w-full text-center lg:w-3/4 mb-6 ${titleColour} ${
-              textCenter ? 'lg:text-center' : 'lg:text-left'
-            }`}
+              titleCenter ? 'lg:text-center' : 'lg:text-left'
+            } ${titleBold ? 'font-bold' : ''}`}
           >
             {title}
           </h1>
