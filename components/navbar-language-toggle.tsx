@@ -1,16 +1,16 @@
-"use client";
-import { Link } from "@/app/i18n/routing";
+'use client';
+import { Link } from '@/app/i18n/routing';
 import {
   NavigationMenu,
   NavigationMenuItem,
   NavigationMenuLink,
   NavigationMenuList,
   navigationMenuNoArrowStyle,
-} from "./ui/navigation-menu";
-import { usePathname } from "@/app/i18n/routing";
+} from './ui/navigation-menu';
+import { usePathname } from '@/app/i18n/routing';
 
 const modifyPath = (currentPath: string) => {
-  return currentPath.slice(3, currentPath.length) + "/";
+  return currentPath.slice(0, currentPath.length) + '/';
 };
 
 export const NavbarLanguageToggle = () => {
@@ -22,11 +22,11 @@ export const NavbarLanguageToggle = () => {
         <NavigationMenuItem className="text-white rounded-none bg-opacity-70">
           <NavigationMenuLink className={navigationMenuNoArrowStyle()}>
             <Link href={modifyPath(pathName)} locale="en">
-              {"EN / "}
+              {'EN / '}
             </Link>
             <Link href={modifyPath(pathName)} locale="tc">
-              {" "}
-              {" 繁"}
+              {' '}
+              {' 繁'}
             </Link>
           </NavigationMenuLink>
         </NavigationMenuItem>
