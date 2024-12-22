@@ -11,6 +11,7 @@ export default function HeaderSubtitleBlock({
   titleCenter = true,
   subtitleColour = 'text-gray-500',
   headerColour = '',
+  titleBold = false,
 }: {
   title?: string;
   subtitle?: string[];
@@ -22,6 +23,7 @@ export default function HeaderSubtitleBlock({
   subtitleColour?: string;
   subtitleSize?: string;
   headerColour?: string;
+  titleBold?: boolean;
 }) {
   return (
     <div className="w-full flex flex-col items-center p-3">
@@ -29,7 +31,9 @@ export default function HeaderSubtitleBlock({
       <h1
         className={`text-center ${
           titleCenter ? 'lg:text-center' : ' lg:text-start'
-        } ${titleSize} mb-5 ${headerColour} lg:w-3/4 w-full leading-relaxed`}
+        } ${titleSize} mb-5 ${headerColour} lg:w-3/4 w-full leading-relaxed
+        ${titleBold ? 'font-bold' : ''}
+        `}
       >
         {title}
       </h1>
@@ -53,8 +57,8 @@ export default function HeaderSubtitleBlock({
       )}
       {disclaimer.length > 0 ? (
         <div
-          className={`w-full lg:w-3/4 mt-1 ${
-            textCenter ? 'text-center' : ''
+          className={`w-full lg:w-3/4 mt-1 text-center ${
+            textCenter ? 'lg:text-center' : 'lg:text-start'
           } ${subtitleColour} text-sm`}
         >
           {disclaimer.map((text, index) => (
