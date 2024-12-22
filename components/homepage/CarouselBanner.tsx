@@ -1,7 +1,7 @@
-"use client";
+'use client';
 
 // Autoplay can only be used on the client
-import Autoplay from "embla-carousel-autoplay";
+import Autoplay from 'embla-carousel-autoplay';
 
 import {
   Carousel,
@@ -9,38 +9,13 @@ import {
   CarouselItem,
   CarouselNext,
   CarouselPrevious,
-} from "@/components/ui/carousel";
-import { useTranslations } from "next-intl";
+} from '@/components/ui/carousel';
 
-export default function CarouselBanner() {
-  const t = useTranslations("homepage");
-
-  const images = [
-    {
-      s: t("image_carousell_1_s"),
-      m: t("image_carousell_1_l"),
-    },
-
-    {
-      s: t("image_carousell_2_s"),
-      m: t("image_carousell_2_l"),
-    },
-    {
-      s: t("image_carousell_3_s"),
-      m: t("image_carousell_3_l"),
-    },
-    {
-      s: t("image_carousell_4_s"),
-      m: t("image_carousell_4_l"),
-    },
-    {
-      s: t("image_carousell_5_s"),
-      m: t("image_carousell_5_l"),
-    },
-  ];
-
-  // TODO: If necessary add anchor links
-
+export default function CarouselBanner({
+  images = [],
+}: {
+  images: { s: string; m: string }[];
+}) {
   return (
     <main className="flex flex-row justify-center w-screen mt-5">
       <Carousel
