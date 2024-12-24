@@ -160,11 +160,11 @@ export default function Page() {
         text={[t('fingerprint_coat_text_1')]}
         images={[
           {
-            imageSrc: t('image_enhanced_key'),
+            imageSrc: t('image_stained_key'),
             caption: t('fingerprint_coat_caption_1'),
           },
           {
-            imageSrc: t('image_stained_key'),
+            imageSrc: t('image_enhanced_key'),
             caption: t('fingerprint_coat_caption_2'),
           },
         ]}
