@@ -1,8 +1,11 @@
-import { useTranslations } from 'next-intl';
+'use server';
+
+import { getTranslations } from 'next-intl/server';
 import { FaClock, FaEnvelope, FaMap, FaPhone } from 'react-icons/fa';
 
-const Page = () => {
-  const t = useTranslations('support');
+export default async function Page() {
+  const t = await getTranslations('support');
+
   return (
     <main className="flex flex-col flex-grow">
       <div
@@ -103,6 +106,4 @@ const Page = () => {
       </div>
     </main>
   );
-};
-
-export default Page;
+}

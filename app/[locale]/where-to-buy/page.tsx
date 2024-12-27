@@ -1,8 +1,7 @@
 import { useTranslations } from 'next-intl';
 
-const Page = () => {
+export default function Page() {
   const t = useTranslations('where_to_buy');
-
   return (
     <main>
       <div className="flex flex-col w-full items-center justify-center content-center mt-5 flex-grow py-10 lg:h-40vh h-auto">
@@ -16,6 +15,4 @@ const Page = () => {
       </div>
     </main>
   );
-};
-
-export default Page;
+}
