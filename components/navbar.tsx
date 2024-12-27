@@ -1,15 +1,15 @@
-"use client";
+'use client';
 
-import * as React from "react";
-import Image from "next/image";
-import Link from "next/link";
-import { useTranslations } from "next-intl";
-import { NavBarAccordian } from "./navbar-accordian";
-import { NavbarNavigationMenu } from "./navbar-navmenu";
-import NavbarLanguageToggle from "./navbar-language-toggle";
+import * as React from 'react';
+import Image from 'next/image';
+import Link from 'next/link';
+import { useTranslations } from 'next-intl';
+import { NavBarAccordian } from './navbar-accordian';
+import { NavbarNavigationMenu } from './navbar-navmenu';
+// import NavbarLanguageToggle from './navbar-language-toggle';
 
 export const NavBar = ({ currPath }: { currPath: string }) => {
-  const t = useTranslations("navbar");
+  const t = useTranslations('navbar');
   console.log(currPath);
 
   return (
@@ -35,32 +35,32 @@ export const NavBar = ({ currPath }: { currPath: string }) => {
           <ul className="font-medium flex flex-col p-4 md:p-0 mt-4 border md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 ">
             <li>
               <NavbarNavigationMenu
-                title={t("navbar_products")}
+                title={t('navbar_products')}
                 items={productComponents}
               />
             </li>
             <li>
               <NavbarNavigationMenu
-                title={t("navbar_support")}
+                title={t('navbar_support')}
                 items={supportComponents}
               />
             </li>
             <li>
               <NavbarNavigationMenu
-                title={t("navbar_about")}
+                title={t('navbar_about')}
                 items={aboutComponents}
               />
             </li>
             <li>
               <NavbarNavigationMenu
-                title={t("navbar_where")}
+                title={t('navbar_where')}
                 items={[]}
                 href="/where-to-buy"
               />
             </li>
-            <li>
+            {/* <li>
               <NavbarLanguageToggle />
-            </li>
+            </li> */}
           </ul>
         </div>
       </div>
@@ -73,28 +73,28 @@ const productComponents: {
   href: string;
 }[] = [
   {
-    title: "vaio_sx14",
-    href: "/product/new_sx14/overview",
+    title: 'vaio_sx14',
+    href: '/product/new_sx14/overview',
   },
   {
-    title: "vaio_se14_2021",
-    href: "/product/se2021/overview",
+    title: 'vaio_se14_2021',
+    href: '/product/se2021/overview',
   },
   {
-    title: "vaio_sx12",
-    href: "/product/sx12/overview",
+    title: 'vaio_sx12',
+    href: '/product/sx12/overview',
   },
   {
-    title: "vaio_a12",
-    href: "/product/a12/overview",
+    title: 'vaio_a12',
+    href: '/product/a12/overview',
   },
   {
-    title: "vaio_s11",
-    href: "/product/s11-s13/overview",
+    title: 'vaio_s11',
+    href: '/product/s11-s13/overview',
   },
   {
-    title: "vaio_s13",
-    href: "/product/s11-s13/overview",
+    title: 'vaio_s13',
+    href: '/product/s11-s13/overview',
   },
 ];
 
@@ -103,26 +103,26 @@ const supportComponents: {
   href: string;
 }[] = [
   {
-    title: "service_center",
-    href: "/support#support-center",
+    title: 'service_center',
+    href: '/support#support-center',
   },
   {
-    title: "warranty",
-    href: "/support#support-warranty",
+    title: 'warranty',
+    href: '/support#support-warranty',
   },
   {
-    title: "repair_terms_and_conditions",
-    href: "/support/repair-tnc",
+    title: 'repair_terms_and_conditions',
+    href: '/support/repair-tnc',
   },
 ];
 
 const aboutComponents: { title: string; href: string }[] = [
   {
-    title: "about_vaio",
-    href: "/about-us",
+    title: 'about_vaio',
+    href: '/about-us',
   },
   {
-    title: "contact_us",
-    href: "/contact-us",
+    title: 'contact_us',
+    href: '/contact-us',
   },
 ];
