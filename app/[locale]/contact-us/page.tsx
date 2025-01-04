@@ -1,5 +1,11 @@
 import { useTranslations } from 'next-intl';
-import { FaClock, FaEnvelope, FaMap, FaPhone } from 'react-icons/fa';
+import {
+  FaClock,
+  FaEnvelope,
+  FaMap,
+  FaPhone,
+  FaRocketchat,
+} from 'react-icons/fa';
 
 const Page = () => {
   const t = useTranslations('contact_us');
@@ -40,6 +46,14 @@ const Page = () => {
                 <FaEnvelope className="h-5 w-5" />
                 <span className="ml-3">{t('email')}</span>
               </div>
+              {t('line').length >= 1 ? (
+                <div className="flex flex-row items-center">
+                  <FaRocketchat className="h-5 w-5" />
+                  <span className="ml-3">{t('line')}</span>
+                </div>
+              ) : (
+                ''
+              )}
             </div>
           </div>
         </div>

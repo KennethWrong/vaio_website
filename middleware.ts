@@ -13,7 +13,7 @@ export async function middleware(request: NextRequest) {
   let host = request.headers.get("host")
 
   let country = "hk"
-  // host = "tc.vaio.com"
+  // host = "tw.vaio.com"
   const parsedHost = host?.split(".")
 
   const handleI18nRouting = createMiddleware({
