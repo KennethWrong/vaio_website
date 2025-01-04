@@ -1,7 +1,13 @@
 'use server';
 
 import { getTranslations } from 'next-intl/server';
-import { FaClock, FaEnvelope, FaMap, FaPhone } from 'react-icons/fa';
+import {
+  FaClock,
+  FaEnvelope,
+  FaMap,
+  FaPhone,
+  FaRocketchat,
+} from 'react-icons/fa';
 
 export default async function Page() {
   const t = await getTranslations('support');
@@ -45,6 +51,14 @@ export default async function Page() {
                 <FaEnvelope className="h-5 w-5" />
                 <span className="ml-3">{t('email')}</span>
               </div>
+              {t('line').length >= 1 ? (
+                <div className="flex flex-row items-center">
+                  <FaRocketchat className="h-5 w-5" />
+                  <span className="ml-3">{t('line')}</span>
+                </div>
+              ) : (
+                ''
+              )}
             </div>
           </div>
         </div>
