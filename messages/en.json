@@ -145,6 +145,7 @@
         "time": "-",
         "phone_number": "(Email reservation is required)",
         "email": "supporthk@hk.vaio.com",
+        "line": "",
         "general_inquiry_title": "General Enquiry",
         "general_inquiry_subtitle": "Email (General Enquiry)",
         "general_inquiry_email":"tw_support@vaio.com",
