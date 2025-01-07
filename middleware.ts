@@ -25,8 +25,10 @@ export async function middleware(request: NextRequest) {
     country = parsedHost[0]
     if (country == "tw") {
       res.cookies.set("NEXT_LOCALE", "tc", {path: "/"})
+      cookieStore.set("NEXT_LOCALE", "tc", {path: "/"})
     } else {
       res.cookies.set("NEXT_LOCALE", "en", {path: "/"})
+      cookieStore.set("NEXT_LOCALE", "en", {path: "/"})
     }
     res.cookies.set("VAIO_COUNTRY", country, {path:"/"})
   }
