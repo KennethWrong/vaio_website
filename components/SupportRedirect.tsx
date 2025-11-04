@@ -1,11 +1,8 @@
 'use client';
 
 import { useEffect } from 'react';
-import { useRouter } from 'next/navigation';
 
 export default function SupportRedirect() {
-  const router = useRouter();
-
   useEffect(() => {
     // Check if we're on tw.vaio.com
     if (
@@ -23,7 +20,8 @@ export default function SupportRedirect() {
       };
 
       if (hash && supportHashRedirects[hash]) {
-        window.location.href = supportHashRedirects[hash];
+        // Use replace() instead of href for redirects (doesn't add to browser history)
+        window.location.replace(supportHashRedirects[hash]);
       }
     }
   }, []);
