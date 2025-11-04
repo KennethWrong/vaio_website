@@ -8,12 +8,14 @@ import {
   FaPhone,
   FaRocketchat,
 } from 'react-icons/fa';
+import SupportRedirect from '@/components/SupportRedirect';
 
 export default async function Page() {
   const t = await getTranslations('support');
 
   return (
     <main className="flex flex-col flex-grow">
+      <SupportRedirect />
       <div
         className="py-16 w-full flex flex-row bg-cover bg-center lg:h-40vh sm:h-auto"
         style={{ backgroundImage: `url('${t('image_support_banner')}')` }}
