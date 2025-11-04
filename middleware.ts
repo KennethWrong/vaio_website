@@ -5,13 +5,15 @@ import { NextRequest, NextResponse } from 'next/server';
 // Redirect mappings for tw.vaio.com
 const redirectMap: Record<string, string> = {
   '/tc': 'https://shopvaio.cyberbiz.co/',
-  '/product/new sx14/overview': 'https://shopvaio.cyberbiz.co/',
+  '/product/new_sx14/overview': 'https://shopvaio.cyberbiz.co/',
   '/product/se2021/overview': 'https://shopvaio.cyberbiz.co/',
   '/product/sx12/overview': 'https://shopvaio.cyberbiz.co/',
   '/product/a12/overview': 'https://shopvaio.cyberbiz.co/',
   '/product/s11-s13/overview': 'https://shopvaio.cyberbiz.co/',
   '/support/repair-tnc':
     'https://shopvaio.cyberbiz.co/pages/%E7%B6%AD%E4%BF%AE%E6%A2%9D%E6%AC%BE%E5%8F%8A%E7%B4%B0%E5%89%87',
+  '/support':
+    'https://shopvaio.cyberbiz.co/pages/%E8%81%AF%E7%B5%A1%E6%88%91%E5%80%91',
   '/about-us': 'https://shopvaio.cyberbiz.co/pages/about-us',
   '/contact-us':
     'https://shopvaio.cyberbiz.co/pages/%E8%81%AF%E7%B5%A1%E6%88%91%E5%80%91',
