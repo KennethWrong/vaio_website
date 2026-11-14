@@ -77,11 +77,6 @@ const Footer = () => {
                   </Link>
                 </li>
               </ul>
-              <Link href="/where-to-buy">
-                <h1 className="text-lg font-bold mb-4 border-b-2 mt-4">
-                  {t("where_to_buy")}
-                </h1>
-              </Link>
             </div>
             <div className="flex flex-col items-center">
               <h1 className="text-lg font-bold mb-2">{t("follow_us")}</h1>
