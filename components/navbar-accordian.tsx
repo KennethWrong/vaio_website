@@ -89,14 +89,6 @@ export const NavBarAccordian = () => {
             )}
           </AccordionContent>
         </AccordionItem>
-        <AccordionItem value="item-4">
-          <Link
-            href="/support"
-            className="block py-2 px-3 text-gray-200 rounded hover:bg-gray-700 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0"
-          >
-            {t('navbar_where')}
-          </Link>
-        </AccordionItem>
       </Accordion>
     </div>
   );

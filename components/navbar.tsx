@@ -51,13 +51,6 @@ export const NavBar = ({ currPath }: { currPath: string }) => {
                 items={aboutComponents}
               />
             </li>
-            <li>
-              <NavbarNavigationMenu
-                title={t('navbar_where')}
-                items={[]}
-                href="/where-to-buy"
-              />
-            </li>
             {/* <li>
               <NavbarLanguageToggle />
             </li> */}
